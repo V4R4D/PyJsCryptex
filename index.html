@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Encryption: from Python to JS</title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            <h1>Encryption: from Python to JS</h1>
+
+            <!-- To Encrypt Section -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="to_encrypt">To encrypt:</label>
+                        <textarea id="to_encrypt" class="form-control">The text to be encrypted follows here.</textarea>
+                    </div>
+                    <button id="do_encrypt" type="button" class="btn btn-primary">Encrypt Using Python</button>
+                </div>
+            </div>
+            
+            <!-- Encrypted Result Section -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <label>Encryption Result:</label>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="encrypt_key" class="col-sm-2 control-label">Key:</label>
+                            <div class="col-sm-10">
+                                <input id="encrypt_key" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="encrypt_iv" class="col-sm-2 control-label">IV:</label>
+                            <div class="col-sm-10">
+                                <input id="encrypt_iv" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="encrypt_ct" class="col-sm-2 control-label">Encrypted:</label>
+                            <div class="col-sm-10">
+                                <textarea id="encrypt_ct" class="form-control" disabled></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decrypt Section -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="decrypted">Decrypt:</label>
+                        <textarea id="decrypted" class="form-control"></textarea>
+                    </div>
+                    <button id="do_decrypt" type="button" class="btn btn-primary" disabled>Decrypt Using JS</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <!-- <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+        <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/mode-cfb.js"></script> -->
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
